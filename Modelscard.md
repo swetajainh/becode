@@ -30,16 +30,16 @@ Linear regression did not performed well on the above data set so i tried other 
 ## Performance
 
 Performance metrics for the various models tested:
-| Model name              | Train/Test score          |                                      
-| --------------          | --------------------------|
-| 1. Linear regression    |   Train score - 0.37      |
-|                         |   Test score - 0.37       |                                         
-|                         |                           | 
-| 2. Random forest        |   Train score - 0.95      |
-|    regressor            |   Test score - 0.67       |
-|                                                     | 
-| 3. Stacking method      |   Train score - 0.93      |
-|                         |   Test score - 0.71       |
+| Model name              | Train/Test score          |  Run time  |                                    
+| --------------          | --------------------------|            | 
+| 1. Linear regression    |   Train score - 0.37      |    1.0s    |
+|                         |   Test score - 0.37       |            |                             
+|                         |                           |            | 
+| 2. Random forest        |   Train score - 0.95      |   1m9.6s   |
+|    regressor            |   Test score - 0.67       |            |
+|                                                     |            | 
+| 3. Stacking method      |   Train score - 0.93      |   5m55.4s  |
+|                         |   Test score - 0.71       |            |
                        
 
 
@@ -58,7 +58,7 @@ The limitation are -
 ### Dependencies:
 The dependencies for training and generating predictions include:
 
-- Python Libraries: scikit-learn, XGBoost, CatBoost
+- Python Libraries: scikit-learn, XGBoost, CatBoost, staking regressor, randomforest regressor
 - Data Preprocessing Libraries: pandas, numpy
  ####  Training Scripts:
 The training process involves the following steps:
