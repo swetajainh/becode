@@ -61,9 +61,20 @@ def identify_column_types(df):
 
     return numerical_cols, categorical_cols
 
-def split_data(X, y, test_size=0.2, random_state=None):
-    # Split the data into training and testing sets
-    return train_test_split(X, y, test_size=test_size, random_state=random_state)
+def split_data(X, y, n_splits=5, random_state=None):
+    # Define the number of splits for Stratified K-Fold Cross-Validation
+    kfold = KFold(n_splits=n_splits, shuffle=True, random_state=random_state)
+    
+    # Iterate over the splits and obtain the training and testing indices
+    for train_index, test_index in kfold.split(X, y):
+        X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+        y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+        
+        # Printing the shapes of the training and testing sets for each fold
+        print("Shape of X_train:", X_train.shape)
+        print("Shape of X_test:", X_test.shape)
+        print("Shape of y_train:", y_train.shape)
+        print("Shape of y_test:", y_test.shape)
 
 def preprocess_data(X_train, X_test, y_train, y_test):
     # Define numerical and categorical columns
