@@ -31,13 +31,13 @@ Linear regression did not performed well on the above data set so i tried other 
 
 Performance metrics for the various models tested:
 | Model name              | Train/Test score          |  Run time  |                                    
-| --------------          | --------------------------|            | 
+| --------------          | --------------------------|  --------- | 
 | 1. Linear regression    |   Train score - 0.37      |    1.0s    |
 |                         |   Test score - 0.37       |            |                             
 |                         |                           |            | 
 | 2. Random forest        |   Train score - 0.95      |   1m9.6s   |
 |    regressor            |   Test score - 0.67       |            |
-|                                                     |            | 
+|                         |                           |            | 
 | 3. Stacking method      |   Train score - 0.93      |   5m55.4s  |
 |                         |   Test score - 0.71       |            |
                        
